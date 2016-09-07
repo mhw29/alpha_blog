@@ -52,12 +52,15 @@ class ArticlesController < ApplicationController
   def set_article
     @article = Article.find(params[:id])
   end
+
   def article_params
     params.require(:article).permit(:title,:description)
   end
 
     def require_same_user
-    if current_user != @article.user
-      falsh[:danger] = "You can only edit and update your own articles."
-      redirect_to root_path
+      if current_user != @article.user and !current_user.admin?
+        flash[:danger] = "You can only edit and update your own articles."
+        redirect_to root_path
+      end
+    end
 end
