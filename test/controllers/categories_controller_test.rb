@@ -3,7 +3,7 @@ class CategoriesControllerTest < ActionController::TestCase
 
   def setup
     @category = Category.create name: "sports"
-    @user = User.create( username: "mwilli05", email: "mahwill22229@gmail.com", password: "password", admin: true )
+    @user = User.create(username: "mwilli05", email: "mahwill22229@gmail.com", password: "password", admin: true )
 
   end
 

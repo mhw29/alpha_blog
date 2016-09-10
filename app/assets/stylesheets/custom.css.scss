@@ -37,6 +37,16 @@ $navbar-default-bg: black;
   font-weight: bold;
 }
 
+.badge{
+  background-color: #cef6f5;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.input_checkbox{
+  width: auto !important;
+}
 .btn-xlarge{
   font-size: 1.7em;
   background-color: black;
